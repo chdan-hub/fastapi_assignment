@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "fastapi-fastapi-assignment"
+version = "0.1.0"
+description = ""
+authors = ["BH13KDR <bh13kdr@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = "^0.116.1"
+uvicorn = "^0.35.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-legth = 120
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+python-version = 3.13
+strict = true
