@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "fastapi-fastapi-assignment"
+name = "fastapiproject"
 version = "0.1.0"
 description = ""
-authors = ["BH13KDR <bh13kdr@example.com>"]
+authors = ["chdan-hub <ksmii358@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -11,17 +11,32 @@ fastapi = "^0.116.1"
 uvicorn = "^0.35.0"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "24.10.0"
+ruff = "0.8.2"
+mypy = "1.13.0"
+pytest = "8.3.4"
+coverage = "7.6.9"
+pytest-asyncio = "0.25.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-legth = 120
+line-length = 110
 
 [tool.ruff]
 target-version = "py313"
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]
-python-version = 3.13
+python_version = 3.13
 strict = true
+
+[tool.coverage.run]
+omit = ["*/test_*.py"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"

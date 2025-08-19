@@ -3,7 +3,7 @@ from http.client import HTTPException
 from idlelib.query import Query
 from typing import Annotated
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, status, Path
 
 from app.models.movies import MovieModel
 from app.models.users import UserModel
